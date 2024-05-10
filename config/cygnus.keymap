@@ -116,12 +116,12 @@
         /* [SHIFT] z x c v b k m , . / [FN]*/
         /* [CTRL] [ALT] [SPACE] [ENTER] [WIN] [BACKSPACE] */
 
-        layer_0 {
+        layer_7 {
             bindings = <
-&kp TAB    &kp Q  &kp W      &kp F     &kp P      &kp G      &kp J     &kp L      &kp U      &kp Y    &kp SEMI  &kp LBKT
-&kp ESC    &kp A  &kp R      &kp S     &kp T      &kp D      &kp H     &kp N      &kp E      &kp I    &kp O     &kp APOS
-&kp LSHFT  &kp Z  &kp X      &kp C     &kp V      &kp B      &kp K     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
-                  &kp LCTRL  &kp LGUI  &kp SPACE  &kp ENTER  &kp BSPC  &kp RCTRL
+&kp N1  &kp Q  &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
+&kp N2  &kp A  &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&kp N3  &kp Z  &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp N4
+               &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
             >;
         };
     };
