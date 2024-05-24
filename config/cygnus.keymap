@@ -87,10 +87,6 @@
             key-positions = <30 31>;
         };
 
-        reset {
-            bindings = <&reset>;
-            key-positions = <0 24 11 35>;
-        };
     };
 
     behaviors {
