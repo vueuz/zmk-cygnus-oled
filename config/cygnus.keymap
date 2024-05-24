@@ -177,13 +177,6 @@
             >;
         };
 
-        func {
-            bindings = <
-&kp Q  &kp W  &kp K_SCREENSAVER  &kp K_SLEEP  &kp K_LOCK   &kp E         &kp E          &kp C_BRIGHTNESS_DEC  &kp C_BRI_MAX     &kp C_BRIGHTNESS_INC  &kp E  &kp E
-&kp E  &kp E  &kp E              &kp E        &kp E        &kp E         &kp E          &kp C_PREV            &kp C_PLAY_PAUSE  &kp C_NEXT            &kp E  &kp E
-&kp E  &kp E  &kp E              &kp E        &kp E        &kp E         &kp E          &kp C_VOLUME_DOWN     &kp K_MUTE        &kp C_VOL_UP          &kp E  &kp E
-              &ltq 1 BACKSPACE   &lt 3 TAB    &lt 2 SPACE  &ltq 2 ENTER  &ltq 3 ESCAPE  &ltq 4 DEL
-            >;
-        };
+
     };
 };
