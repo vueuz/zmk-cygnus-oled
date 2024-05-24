@@ -23,73 +23,48 @@
 
         left_bkt {
             bindings = <&kp LBKT>;
-            key-positions = <3 4>;
+            key-positions = <3 2>;
             timeout-ms = <50>;
         };
 
         right_bkt {
             bindings = <&kp RBKT>;
-            key-positions = <7 8>;
+            key-positions = <6 7>;
             timeout-ms = <50>;
         };
 
         left_par {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <15 16>;
+            key-positions = <12 13>;
             timeout-ms = <50>;
         };
 
         right_par {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <19 20>;
+            key-positions = <16 17>;
             timeout-ms = <50>;
         };
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <27 28>;
+            key-positions = <23 22>;
             timeout-ms = <50>;
         };
 
         right_brace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <31 32>;
+            key-positions = <26 27>;
             timeout-ms = <50>;
         };
 
         bac {
             bindings = <&kp BACKSLASH>;
-            key-positions = <6 7>;
+            key-positions = <4 5>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
-            key-positions = <18 19>;
-        };
-
-        equ {
-            bindings = <&kp EQUAL>;
-            key-positions = <4 5>;
-        };
-
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <16 17>;
-        };
-
-        de {
-            bindings = <&kp MINUS>;
-            key-positions = <28 29>;
-        };
-
-        underline {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <30 31>;
-        };
-
-        reset {
-            bindings = <&reset>;
-            key-positions = <0 24 11 35>;
+            key-positions = <14 15>;
         };
     };
 
@@ -141,17 +116,13 @@
         /* [SHIFT] z x c v b k m , . / [FN]*/
         /* [CTRL] [ALT] [SPACE] [ENTER] [WIN] [BACKSPACE] */
 
-        qwerty {
+        layer_7 {
             bindings = <
-&kp 1  &kp Q           &kp W             &kp E        &kp R             &kp T         &kp Y          &kp U              &kp I                &kp O                    &hm LG(LS(V)) P      &kp LEFT_BRACKET
-&kp 2       &hm LEFT_GUI A  &hm LEFT_ALT S    &hm LCTRL D  &hm LEFT_SHIFT F  &kp G         &kp H          &hm RIGHT_SHIFT J  &hm RCTRL K          &hm RIGHT_ALT L          &as COLON SEMICOLON  &kp DOUBLE_QUOTES
-&kp LSHFT                &kp Z           &kp X             &kp C        &kp V             &kp B         &kp N          &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &kp Q
-                                         &ltq 4 BACKSPACE  &lt 2 TAB    &lt 3 SPACE       &ltq 2 ENTER  &ltq 3 ESCAPE  &ltq 4 DEL
+&kp N1  &kp Q  &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
+&kp N2  &kp A  &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&kp N3  &kp Z  &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp N4
+               &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
             >;
         };
-
-
-
-
     };
 };
