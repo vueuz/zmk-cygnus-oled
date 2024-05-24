@@ -19,52 +19,77 @@
 
 / {
     combos {
-        compatible = "zmk,combos";
+               compatible = "zmk,combos";
 
         left_bkt {
             bindings = <&kp LBKT>;
-            key-positions = <3 2>;
+            key-positions = <3 4>;
             timeout-ms = <50>;
         };
 
         right_bkt {
             bindings = <&kp RBKT>;
-            key-positions = <6 7>;
+            key-positions = <7 8>;
             timeout-ms = <50>;
         };
 
         left_par {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <12 13>;
+            key-positions = <15 16>;
             timeout-ms = <50>;
         };
 
         right_par {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <16 17>;
+            key-positions = <19 20>;
             timeout-ms = <50>;
         };
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <23 22>;
+            key-positions = <27 28>;
             timeout-ms = <50>;
         };
 
         right_brace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <26 27>;
+            key-positions = <31 32>;
             timeout-ms = <50>;
         };
 
         bac {
             bindings = <&kp BACKSLASH>;
-            key-positions = <4 5>;
+            key-positions = <6 7>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
-            key-positions = <14 15>;
+            key-positions = <18 19>;
+        };
+
+        equ {
+            bindings = <&kp EQUAL>;
+            key-positions = <4 5>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <16 17>;
+        };
+
+        de {
+            bindings = <&kp MINUS>;
+            key-positions = <28 29>;
+        };
+
+        underline {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <30 31>;
+        };
+
+        reset {
+            bindings = <&reset>;
+            key-positions = <0 24 11 35>;
         };
     };
 
