@@ -88,12 +88,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <600>;
+            tapping-term-ms = <500>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            quick-tap-ms = <180>;
+            quick-tap-ms = <10>;
             global-quick-tap;
         };
 
@@ -101,12 +101,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LTQ";
             #binding-cells = <2>;
-            tapping-term-ms = <600>;
+            tapping-term-ms = <500>;
             quick_tap_ms = <0>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
 
-            quick-tap-ms = <180>;
+            quick-tap-ms = <10>;
             global-quick-tap;
         };
 
@@ -135,7 +135,7 @@
             bindings = <
 &hm LC(SPACE) TAB  &kp Q           &kp W                &kp F               &hm LG(V) P       &kp G         &kp J            &kp L              &kp U                &kp Y                    &as COLON SEMICOLON  &as UNDERSCORE MINUS
 &hm LG(Q) ESCAPE   &hm LEFT_WIN A  &hm LEFT_ALT R       &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D         &kp H            &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I          &kp O                &as DOUBLE_QUOTES SQT
-&hm LG(L) LC(TAB)  &kp Z           &kp X                &kp C               &hm RC(V) V       &kp B         &kp K            &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as PLUS EQUAL
+&hm LG(L) LC(TAB)  &kp Z           &hm LC(X) X          &hm LC(C) C         &hm RC(V) V       &kp B         &kp K            &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as PLUS EQUAL
                                    &hm LG(TAB) LA(TAB)  &kp LEFT_CONTROL    &lt 2 SPACE       &ltq 3 ENTER  &kp RIGHT_SHIFT  &kp BACKSPACE
             >;
         };
@@ -144,8 +144,8 @@
             bindings = <
 &hm LC(SPACE) TAB      &kp Q           &kp W            &kp F               &hm LC(V) P       &kp G         &kp J            &kp L              &kp U                &kp Y                    &as COLON SEMICOLON  &as UNDERSCORE MINUS
 &hm LG(SPACE) ESCAPE   &hm LEFT_WIN A  &hm LEFT_ALT R   &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D         &kp H            &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I          &kp O                &as DOUBLE_QUOTES SQT
-&hm LC(LG(Q)) LC(TAB)  &kp Z           &kp X            &kp C               &kp V             &kp B         &kp K            &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as PLUS EQUAL
-                                       &hm F13 LA(TAB)  &kp LEFT_CONTROL    &lt 2 SPACE       &ltq 3 ENTER  &kp RIGHT_SHIFT  &kp BACKSPACE
+&hm LC(LG(Q)) LC(TAB)  &kp Z           &hm LG(X) X      &hm LG(C) C         &hm LG(V) V       &kp B         &kp K            &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as PLUS EQUAL
+                                       &hm F13 LA(TAB)  &kp LEFT_COMMAND    &lt 2 SPACE       &ltq 3 ENTER  &kp RIGHT_SHIFT  &kp BACKSPACE
             >;
         };
 
