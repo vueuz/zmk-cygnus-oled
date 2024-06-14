@@ -88,7 +88,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <600>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -101,7 +101,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LTQ";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <600>;
             quick_tap_ms = <0>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
@@ -116,7 +116,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <335>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -133,46 +133,46 @@
 
         windows {
             bindings = <
-&hm LC(SPACE) TAB    &kp Q           &kp W             &kp F               &hm LG(V) P       &kp G         &kp J             &kp L              &kp U                &kp Y                    &as COLON SEMICOLON  &as UNDERSCORE MINUS
-&hm LG(TAB) LA(TAB)  &hm LEFT_WIN A  &hm LEFT_ALT R    &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D         &kp H             &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I          &kp O                &as DOUBLE_QUOTES SQT
-&hm LG(L) LG(Q)      &kp Z           &kp X             &kp C               &kp V             &kp B         &kp K             &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as PLUS EQUAL
-                                     &kp LEFT_CONTROL  &lt 2 ESCAPE        &lt 3 SPACE       &ltq 3 ENTER  &ltq 2 BACKSPACE  &kp LEFT_SHIFT
+&hm LC(SPACE) TAB  &kp Q           &kp W                &kp F               &hm LG(V) P       &kp G         &kp J            &kp L              &kp U                &kp Y                    &as COLON SEMICOLON  &as UNDERSCORE MINUS
+&hm LG(Q) ESCAPE   &hm LEFT_WIN A  &hm LEFT_ALT R       &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D         &kp H            &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I          &kp O                &as DOUBLE_QUOTES SQT
+&hm LG(L) LC(TAB)  &kp Z           &kp X                &kp C               &hm RC(V) V       &kp B         &kp K            &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as PLUS EQUAL
+                                   &hm LG(TAB) LA(TAB)  &kp LEFT_CONTROL    &lt 2 SPACE       &ltq 3 ENTER  &kp RIGHT_SHIFT  &kp BACKSPACE
             >;
         };
 
         macos {
             bindings = <
-&hm LC(SPACE) TAB         &kp Q           &kp W           &kp F               &hm LC(V) P       &kp G         &kp J             &kp L              &kp U                &kp Y                    &as COLON SEMICOLON  &as UNDERSCORE MINUS
-&hm LG(UP_ARROW) LG(TAB)  &hm LEFT_WIN A  &hm LEFT_ALT R  &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D         &kp H             &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I          &kp O                &as DOUBLE_QUOTES SQT
-&hm LC(LG(Q)) LG(SPACE)   &kp Z           &kp X           &kp C               &kp V             &kp B         &kp K             &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as PLUS EQUAL
-                                          &kp LEFT_GUI    &lt 2 ESCAPE        &lt 3 SPACE       &ltq 3 ENTER  &ltq 2 BACKSPACE  &kp LEFT_SHIFT
+&hm LC(SPACE) TAB      &kp Q           &kp W            &kp F               &hm LC(V) P       &kp G         &kp J            &kp L              &kp U                &kp Y                    &as COLON SEMICOLON  &as UNDERSCORE MINUS
+&hm LG(SPACE) ESCAPE   &hm LEFT_WIN A  &hm LEFT_ALT R   &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D         &kp H            &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I          &kp O                &as DOUBLE_QUOTES SQT
+&hm LC(LG(Q)) LC(TAB)  &kp Z           &kp X            &kp C               &kp V             &kp B         &kp K            &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as PLUS EQUAL
+                                       &hm F13 LA(TAB)  &kp LEFT_CONTROL    &lt 2 SPACE       &ltq 3 ENTER  &kp RIGHT_SHIFT  &kp BACKSPACE
             >;
         };
 
         nums {
             bindings = <
-&kp F12          &kp F1           &kp F2            &kp F3        &kp F4       &as LS(F5) F5  &kp F6            &kp F7          &kp F8        &kp F9                &kp F10                &kp F11
-&as TILDE GRAVE  &kp NUMBER_1     &kp NUMBER_2      &kp NUMBER_3  &kp N4       &kp N5         &kp N6            &kp N7          &kp N8        &kp N9                &kp N0                 &kp PERIOD
-&kp CAPS         &kp EXCLAMATION  &kp AT_SIGN       &kp HASH      &kp DOLLAR   &kp PERCENT    &kp CARET         &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COMMA
-                                  &kp LEFT_CONTROL  &lt 2 ESCAPE  &lt 3 SPACE  &ltq 3 ENTER   &ltq 2 BACKSPACE  &kp LEFT_SHIFT
+&kp F12          &kp F1           &kp F2               &kp F3            &kp F4       &as LS(F5) F5  &kp F6           &kp F7         &kp F8        &kp F9     &kp F10     &kp F11
+&as TILDE GRAVE  &kp NUMBER_1     &kp NUMBER_2         &kp NUMBER_3      &kp N4       &kp N5         &kp N6           &kp N7         &kp N8        &kp N9     &kp N0      &kp LEFT_BRACKET
+&kp CAPS         &kp EXCLAMATION  &kp AT_SIGN          &kp HASH          &kp DOLLAR   &kp PERCENT    &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp COMMA  &kp PERIOD  &kp LEFT_BRACE
+                                  &hm LG(TAB) LA(TAB)  &kp LEFT_CONTROL  &lt 2 SPACE  &ltq 3 ENTER   &kp RIGHT_SHIFT  &kp BACKSPACE
             >;
         };
 
         func {
             bindings = <
-&to 0  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN  &kp UP_ARROW      &kp C_VOLUME_UP  &kp PRINTSCREEN  &kp DELETE        &kp C_VOLUME_DOWN  &kp UP_ARROW      &kp C_VOL_UP  &kp C_MUTE           &to 0
-&to 1  &kp LC(LA(W))        &kp LEFT           &kp DOWN          &kp RIGHT        &kp PAGE_UP      &kp HOME          &kp LEFT           &kp DOWN          &kp RIGHT     &kp LC(LG(W))        &to 1
-&to 4  &kp LC(LS(ESCAPE))   &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &kp PAGE_DOWN    &kp END           &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT    &kp LC(LS(C_POWER))  &to 4
-                            &kp LEFT_CONTROL   &lt 2 ESCAPE      &lt 3 SPACE      &ltq 3 ENTER     &ltq 2 BACKSPACE  &kp LEFT_SHIFT
+&to 0  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN    &kp UP_ARROW      &kp C_VOLUME_UP  &kp PRINTSCREEN  &kp DELETE       &kp C_VOLUME_DOWN  &kp UP_ARROW      &kp C_VOL_UP  &kp C_MUTE           &to 0
+&to 1  &kp LC(LA(W))        &kp LEFT             &kp DOWN          &kp RIGHT        &kp PAGE_UP      &kp HOME         &kp LEFT           &kp DOWN          &kp RIGHT     &kp LC(LG(W))        &to 1
+&to 4  &kp LC(LS(ESCAPE))   &kp C_PREV           &kp C_PLAY_PAUSE  &kp C_NEXT       &kp PAGE_DOWN    &kp END          &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT    &kp LC(LS(C_POWER))  &to 4
+                            &hm LG(TAB) LA(TAB)  &kp LEFT_CONTROL  &lt 2 SPACE      &ltq 3 ENTER     &kp RIGHT_SHIFT  &kp BACKSPACE
             >;
         };
 
         mini-nums {
             bindings = <
-&trans  &kp TAB           &kp Q             &kp W         &kp E        &trans        &trans            &kp N1          &kp N2  &kp N3  &trans  &trans
-&trans  &kp LEFT_SHIFT    &kp A             &kp S         &kp D        &kp F         &trans            &kp N4          &kp N5  &kp N6  &kp N0  &trans
-&trans  &kp LEFT_CONTROL  &kp Z             &kp X         &kp C        &kp V         &trans            &kp N7          &kp N8  &kp N9  &trans  &trans
-                          &kp LEFT_CONTROL  &lt 2 ESCAPE  &lt 3 SPACE  &ltq 3 ENTER  &ltq 2 BACKSPACE  &kp LEFT_SHIFT
+&kp NUMBER_1  &kp TAB           &kp Q             &kp W           &kp E      &kp R         &kp PLUS          &kp N1          &kp N2  &kp N3  &kp SLASH  &trans
+&kp NUMBER_2  &kp LEFT_SHIFT    &kp A             &kp S           &kp D      &kp F         &kp MINUS         &kp N4          &kp N5  &kp N6  &kp N0     &trans
+&kp NUMBER_3  &kp LEFT_CONTROL  &kp Z             &kp X           &kp C      &kp V         &kp ASTERISK      &kp N7          &kp N8  &kp N9  &kp EQUAL  &trans
+                                &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp SPACE  &ltq 3 ENTER  &ltq 2 BACKSPACE  &kp LEFT_SHIFT
             >;
         };
 
