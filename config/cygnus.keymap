@@ -88,7 +88,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <400>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -101,7 +101,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LTQ";
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <399>;
             quick_tap_ms = <0>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
@@ -119,6 +119,78 @@
             tapping-term-ms = <335>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
+        };
+    };
+
+    macros {
+        next_line: PASW {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp ENTER>;
+            label = "PASW";
+        };
+
+        pswd: pswd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N4 &kp N7 &kp N8 &kp N9 &kp N6 &kp N5 &kp N2 &kp N0>;
+            label = "PSWD";
+        };
+
+        mac_pwd: mac_pwd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N3 &kp N3 &kp N5 &kp N6 &kp ENTER>;
+            label = "MAC_PWD";
+        };
+
+        base_pwd: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(I) &kp SQT &kp M &kp DOT &kp LEFT>;
+            label = "NEW_MACRO";
+        };
+
+        simple_pwd: simple_pwd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp A &kp L &kp L &kp N1 &kp N5 &kp N6 &kp N4 &kp N7 &kp N6 &kp N3 &kp N8 &kp N7 &kp N9 &kp N7>;
+            label = "SIMPLE_PWD";
+        };
+
+        base_phone_num: base_phone_num {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp N5 &kp N6 &kp N4 &kp N7 &kp N6 &kp N3 &kp N8 &kp N7 &kp N9 &kp N7>;
+            label = "BASE_PHONE_NUM";
+        };
+
+        phone_number: phone_number {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp N5 &kp N6 &kp N6 &kp N9 &kp N6 &kp N5 &kp N7 &kp N7 &kp N0 &kp N3>;
+            label = "PHONE_NUMBER";
+        };
+
+        qq: qq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N2 &kp N9 &kp N4 &kp N7 &kp N1 &kp N8 &kp N5 &kp N8 &kp N1 &kp AT &kp Q &kp Q &kp DOT &kp C &kp O &kp M>;
+            label = "QQ";
+        };
+
+        base_gmail: base_gmail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp C &kp C &kp W &kp N1 &kp N2 &kp N1 &kp N3 &kp N8 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "BASE_GMAIL";
+        };
+
+        work_gmail: work_gmail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp U &kp N &kp G &kp DOT &kp V &kp E &kp N &kp U &kp E &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "WORK_GMAIL";
         };
     };
 
@@ -145,52 +217,52 @@
 &hm LC(SPACE) TAB      &kp Q           &kp W            &kp F               &hm LC(V) P       &kp G         &kp J            &kp L              &kp U                &kp Y                    &as COLON SEMICOLON  &as UNDERSCORE MINUS
 &hm LG(SPACE) ESCAPE   &hm LEFT_WIN A  &hm LEFT_ALT R   &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D         &kp H            &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I          &kp O                &as DOUBLE_QUOTES SQT
 &hm LC(LG(Q)) LC(TAB)  &kp Z           &hm LG(X) X      &hm LG(C) C         &hm LG(V) V       &kp B         &kp K            &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as PLUS EQUAL
-                                       &hm F13 LA(TAB)  &kp LEFT_COMMAND    &lt 2 SPACE       &ltq 3 ENTER  &kp RIGHT_SHIFT  &kp BACKSPACE
+                                       &hm F13 LG(TAB)  &kp LEFT_COMMAND    &lt 5 SPACE       &ltq 6 ENTER  &kp RIGHT_SHIFT  &kp BACKSPACE
             >;
         };
 
         nums {
             bindings = <
-&kp F12          &kp F1           &kp F2               &kp F3            &kp F4       &as LS(F5) F5  &kp F6           &kp F7         &kp F8        &kp F9     &kp F10     &kp F11
-&as TILDE GRAVE  &kp NUMBER_1     &kp NUMBER_2         &kp NUMBER_3      &kp N4       &kp N5         &kp N6           &kp N7         &kp N8        &kp N9     &kp N0      &kp LEFT_BRACKET
-&kp CAPS         &kp EXCLAMATION  &kp AT_SIGN          &kp HASH          &kp DOLLAR   &kp PERCENT    &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp COMMA  &kp PERIOD  &kp LEFT_BRACE
-                                  &hm LG(TAB) LA(TAB)  &kp LEFT_CONTROL  &lt 2 SPACE  &ltq 3 ENTER   &kp RIGHT_SHIFT  &kp BACKSPACE
+&kp F12          &kp F1           &kp F2        &kp F3            &kp F4       &as LS(F5) F5  &kp F6           &kp F7         &kp F8        &kp F9      &kp F10  &kp F11
+&as TILDE GRAVE  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3      &kp N4       &kp N5         &kp N6           &kp N7         &kp N8        &kp N9      &kp N0   &base_gmail
+&kp ENTER        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH          &kp DOLLAR   &kp PERCENT    &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp PERIOD  &pswd    &work_gmail
+                                  &qq           &kp LEFT_CONTROL  &lt 2 SPACE  &phone_number  &base_phone_num  &kp BACKSPACE
             >;
         };
 
         func {
             bindings = <
-&to 0  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN    &kp UP_ARROW      &kp C_VOLUME_UP  &kp PRINTSCREEN  &kp DELETE       &kp C_VOLUME_DOWN  &kp UP_ARROW      &kp C_VOL_UP  &kp C_MUTE           &to 0
-&to 1  &kp LC(LA(W))        &kp LEFT             &kp DOWN          &kp RIGHT        &kp PAGE_UP      &kp HOME         &kp LEFT           &kp DOWN          &kp RIGHT     &kp LC(LG(W))        &to 1
-&to 4  &kp LC(LS(ESCAPE))   &kp C_PREV           &kp C_PLAY_PAUSE  &kp C_NEXT       &kp PAGE_DOWN    &kp END          &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT    &kp LC(LS(C_POWER))  &to 4
-                            &hm LG(TAB) LA(TAB)  &kp LEFT_CONTROL  &lt 2 SPACE      &ltq 3 ENTER     &kp RIGHT_SHIFT  &kp BACKSPACE
+&to 0  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN  &kp UP_ARROW      &kp C_VOLUME_UP  &kp PRINTSCREEN  &kp DELETE       &kp C_VOLUME_DOWN  &kp UP_ARROW      &kp C_VOL_UP  &kp C_MUTE           &to 0
+&to 1  &kp LC(LA(W))        &kp LEFT           &kp DOWN          &kp RIGHT        &kp PAGE_UP      &kp HOME         &kp LEFT           &kp DOWN          &kp RIGHT     &kp LC(LG(W))        &to 1
+&to 4  &kp LC(LS(ESCAPE))   &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &kp PAGE_DOWN    &kp END          &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT    &kp LC(LS(C_POWER))  &to 4
+                            &kp LEFT_SHIFT     &kp LEFT_CONTROL  &kp LEFT_ALT     &ltq 3 ENTER     &kp RIGHT_SHIFT  &kp BACKSPACE
             >;
         };
 
         mini-nums {
             bindings = <
-&kp NUMBER_1  &kp TAB           &kp Q             &kp W           &kp E      &kp R         &kp PLUS          &kp N1          &kp N2  &kp N3  &kp SLASH  &trans
-&kp NUMBER_2  &kp LEFT_SHIFT    &kp A             &kp S           &kp D      &kp F         &kp MINUS         &kp N4          &kp N5  &kp N6  &kp N0     &trans
+&kp NUMBER_1  &kp TAB           &kp Q             &kp W           &kp E      &kp R         &kp PLUS          &kp N1          &kp N2  &kp N3  &kp SLASH  &base_pwd
+&kp NUMBER_2  &kp LEFT_SHIFT    &kp A             &kp S           &kp D      &kp F         &kp MINUS         &kp N4          &kp N5  &kp N6  &kp N0     &simple_pwd
 &kp NUMBER_3  &kp LEFT_CONTROL  &kp Z             &kp X           &kp C      &kp V         &kp ASTERISK      &kp N7          &kp N8  &kp N9  &kp EQUAL  &trans
                                 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp SPACE  &ltq 3 ENTER  &ltq 2 BACKSPACE  &kp LEFT_SHIFT
             >;
         };
 
-        layer_4 {
+        mac_nums {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans
+&kp F12          &kp F1           &kp F2        &kp F3            &kp F4       &as LS(F5) F5  &kp F6           &kp F7         &kp F8        &kp F9      &kp F10   &kp F11
+&as TILDE GRAVE  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3      &kp N4       &kp N5         &kp N6           &kp N7         &kp N8        &kp N9      &kp N0    &base_gmail
+&kp ENTER        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH          &kp DOLLAR   &kp PERCENT    &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp PERIOD  &mac_pwd  &work_gmail
+                                  &qq           &kp LEFT_CONTROL  &lt 2 SPACE  &phone_number  &base_phone_num  &kp BACKSPACE
             >;
         };
 
-        layer_5 {
+        mac_func {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans
+&to 0  &kp C_AL_CALCULATOR  &kp C_VOLUME_DOWN  &kp UP_ARROW      &kp C_VOLUME_UP  &kp PRINTSCREEN  &kp DELETE       &kp C_VOLUME_DOWN  &kp UP_ARROW      &kp C_VOL_UP  &kp C_MUTE           &to 0
+&to 1  &kp LC(LA(W))        &kp LEFT           &kp DOWN          &kp RIGHT        &kp PAGE_UP      &kp HOME         &kp LEFT           &kp DOWN          &kp RIGHT     &kp LC(LG(W))        &to 1
+&to 4  &kp LC(LS(ESCAPE))   &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &kp PAGE_DOWN    &kp END          &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT    &kp LC(LS(C_POWER))  &to 4
+                            &kp LEFT_SHIFT     &kp LEFT_CONTROL  &kp LEFT_ALT     &ltq 3 ENTER     &kp RIGHT_SHIFT  &kp BACKSPACE
             >;
         };
     };
